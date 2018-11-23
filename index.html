@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>The 1st International Workshop on Smart Sensing System (IWSSS'19)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+
+<header class="fixed-header" id="fixed-header">
+  <div class="wrapper">
+    <h1><a href="./"><span>IWSSS'19</span></a></h1>
+    <nav>
+      <ul id="primary-nav">
+        <li data-target="top">Top</li>
+        <li data-target="overview">Overview</li>
+        <li data-target="call-for-paper">Call for Paper</li>
+        <li data-target="organizers">Organizers</li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="main">
+  <header id="top">
+    <img src="img/top-visual.jpg">
+    <h1><span>International Workshop on Smart Sensing System</span>
+      <span>(IWSSS'19)</span>
+      <small>in conjunction with IE'19</small></h1>
+  </header>
+
+  <!-- <div class="news">
+    <h2>News</h2>
+    <p></p>
+  </div> -->
+
+  <div id="overview" class="clearfix">
+    <h2>Overview</h2>
+    <p>Overview text</p>
+    <img src="img/logo-orig.png" class="overview-logo">
+    <dl class="overview">
+      <dt><i class="fa fa-check"></i></dt>
+      <dd>International Workshop on Smart Sensing System (IWSSS'19)</dd>
+      <dd class="percom"><a href="http://www.intenv.org/">in conjunction with the 15th International Conference on Intelligent Environments (IE'19)</a></dd>
+      <dt><i class="fa fa-calendar-check-o"></i></dt>
+      <dd>24-27, June 2019</dd>
+      <dt><i class="fa fa-map-marker"></i></dt>
+      <dd>Rabat, Morocco</dd>
+    </dl>
+  </div>
+
+  <div id="call-for-paper">
+    <h2><i class="fa fa-bullhorn"></i>Call for Papers</h2>
+    <p>call for papers</p>
+    <p>Topics of this workshop include, but are not limited to:</p>
+    <ul>
+      <li>aaaa</li>
+    </ul>
+  </div>
+
+  <div>
+    <h2><i class="fa fa-pencil"></i>Submission Guidelines</h2>
+    <dl class="guideline">
+      <dt>Paper Template</dt><dd>X</dd>
+      <dt>Paper format</dt><dd>X</dd>
+      <dt>Page limitation</dt><dd>X pages</dd>
+                              <dd>note</dd>
+      <dt>Submission page</dt><dd>X</dd>
+    </dl>
+    <h3>NOTE</h3>
+    <ul>
+      <li>note</li>
+    </ul>
+  </div>
+
+  <div>
+    <h2><i class="fa fa-clock-o"></i>Important Dates</h2>
+    <dl class="important-dates">
+      <dt>Paper Submission Due</dt><dd>X,<s></s><span class="news"></span>2019 (23:59 AoE)</dd>
+      <dt>Acceptance Notification</dt><dd>X, 2019</dd>
+      <dt>Camera-Ready Due</dt><dd>X, 2019</dd>
+    </dl>
+  </div>
+
+  <div id="organizers">
+    <h2><i class="fa fa-user-circle-o"></i>Organizers</h2>
+    <h3>Program Committee <span>(*sorted by family name)</span></h3>
+    <ul class="person-list">
+      <li>Prof. X<span>X University, Japan</span> </li>
+    </ul>
+    <h3>Organizing Committee</h3>
+    <ul class="person-list">
+      <li>Prof. Keiichi Yasumoto<span>Nara Institute of Science and Technology, Japan</span></li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Contact</h2>
+    <p>info@example.com</p>
+  </div>
+
+</section>
+
+<footer>
+  &copy; International Workshop on Smart Sensing System (IWSSS'19)
+</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+var isTopArea = true;
+$(window).scroll(function() {
+  if(isTopArea && $(this).scrollTop() > 50) {
+    isTopArea = false;
+    $("#fixed-header").addClass("scrolled");
+  }
+  if(!isTopArea && $(this).scrollTop() < 50) {
+    isTopArea = true;
+    $("#fixed-header").removeClass("scrolled");
+  }
+});
+$("#primary-nav li").click(function() {
+  var target = $(this).data("target");
+  $("html, body").animate({scrollTop:$("#" + target).offset().top - 50});
+});
+</script>
