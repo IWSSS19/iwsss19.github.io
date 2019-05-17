@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>The Fourth International Workshop on Smart Sensing System (IWSSS'19)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+
+<header class="fixed-header" id="fixed-header">
+  <div class="wrapper">
+    <h1><a href="./"><span>IWSSS'19</span></a></h1>
+    <nav>
+      <ul id="primary-nav">
+        <li data-target="top">Top</li>
+        <li data-target="overview">Overview</li>
+        <li data-target="call-for-paper">Call for Paper</li>
+        <li data-target="guideline">Guideline</li>
+        <li data-target="organizers">Organizers</li>
+      </ul>
+    </nav>
+    </div>
+</header>
+
+<section class="main">
+  <header id="top">
+    <img src="img/top-visual.jpg">
+    <h1><span>The Fourth International Workshop on Smart Sensing Systems</span>
+      <span>(IWSSS'19)</span>
+      <small>in conjunction with <a href="https://intenv.herokuapp.com/ie19/home">IE'19</a></small></h1>
+  </header>
+
+    <div id="program">
+      
+    <h2><i class="fa fa-bullhorn"></i>Draft Program</h2>
+
+    <p>
+    <h3>9:30-9:40 Opening</h3>
+    <p>Christian Decker and Keiichi Yasumoto</p>
+    </p>
+
+    <p>
+    <h3>9:40-10:30 Keynote</h3>
+    <p>Chair: Christian Decker</p>
+    <ul>
+      <li><b><font size="4">Smart Sensing at the Edge for Smart City Applications</font></b><br>
+      Hirozumi Yamaguchi (Osaka University)</li>
+    </ul>
+    </p>
+
+    <p>
+    <h3>10:30-11:00 Coffee Break</h3>
+    </p>
+
+    <p>
+    <h3>11:00-13:00 Paper Session</h3>
+    <p>Chair: Keiichi Yasumoto</p>
+    <ul>
+      <li><b>Advancement of IoH/IoT “Assist suits” to support
+    workplaces with heavy lifting and telescopic system to enable
+      further reduction of stress applied to knee joints</b></br>
+       Taishi NAKAZAWA , Yasuhiro KAWAHARA (The Open University of
+    Japan) and Hiroshi YOSHIDA (Nippon Telegraph And Telephone
+      Corporation)</li>
+      <li><b>System for motivating ethical consumption behavior using
+      dongle interface application</b></br>
+      Junichi SUZUKI (The University of Tokyo/ DENTSU INC.), Tomonari OKUBO, Hiromu OKI (ISI-Dentsu, Ltd.), Takayuki FUKUI (Panasonic Corporation)
+  Takashi FUJII, Toshihiko RYUGO, Motoki SATO (Sivira Inc.), and
+      Yasuhiro KAWAHARA (The Open University of Japan)</li>
+      <li><b>Identification of Effective EEG Electrodes for Depression
+      Sensing</b></br>
+      Yuma TSURUGASAKI , Katsuhiro MORI (Aoyama Gakuin University),
+    Michael Hefenbrock (Karlsruhe Institute of Technology), and
+      Yoshito TOBE (Aoyama Gakuin University)</li>
+      <li><b>An Approach for Measuring IoT Interoperability using
+      Causal Modeling</b></br>
+      Sebastian KOTSTEIN and Christian DECKER (Reutlingen University)</li>
+      <li><b>A Method for Generating Multiple Tour Routes Balancing
+      User Satisfaction and Resource Consumption</b></br>
+      Yodai HIRANO, Hirohiko SUWA and Keiichi YASUMOTO (Nara Institute
+    of Science and Technology/ RIKEN Center for Advanced Intelligence
+      Project)</li>
+      </ul>
+      </p>
+
+      <p>
+      <h3>13:00-14:00 Lunch Break</h3>
+      </p>
+
+      <p>
+      <h3>14:00 – 14:30</h3>
+      <ul>
+	<li><b>Quantitative Analysis and Trends of IWSSS Topics</b></br>
+	Christian DECKER (Reutlingen University)</li>
+      </ul>
+      </p>
+
+      <p>
+      <h3>14:30-15:45</h3>
+      <ul>
+	<li> <b>Discussion on a Roadmap of Smart Sensing Systems</b></br>
+	All Workshop participants</li>
+      </ul>
+      </p>
+
+      <p>
+      <h3>15:45-16:00 Closing</h3>
+      <p>Christian Decker and Keiichi Yasumoto</p>
+      </p>
+      
+      
+  </div>
+
+  
+<!--
+  <div>
+    <h2>Contact</h2>
+    <p>info@example.com</p>
+  </div>
+-->
+  
+</section>
+
+<footer>
+  &copy; Fourth International Workshop on Smart Sensing Systems (IWSSS'19)
+</footer>
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+var isTopArea = true;
+$(window).scroll(function() {
+  if(isTopArea && $(this).scrollTop() > 50) {
+    isTopArea = false;
+    $("#fixed-header").addClass("scrolled");
+  }
+  if(!isTopArea && $(this).scrollTop() < 50) {
+    isTopArea = true;
+    $("#fixed-header").removeClass("scrolled");
+  }
+});
+$("#primary-nav li").click(function() {
+  var target = $(this).data("target");
+  $("html, body").animate({scrollTop:$("#" + target).offset().top - 50});
+});
+</script>
