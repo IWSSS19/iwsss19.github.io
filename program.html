@@ -11,7 +11,8 @@
     <nav>
       <ul id="primary-nav">
         <li data-target="top">Top</li>
-        <li data-target="overview">Overview</li>
+	<li data-target="overview">Overview</li>
+	<li data-target="program">Program</li>
         <li data-target="call-for-paper">Call for Paper</li>
         <li data-target="guideline">Guideline</li>
         <li data-target="organizers">Organizers</li>
@@ -32,26 +33,23 @@
       
     <h2><i class="fa fa-bullhorn"></i>Draft Program</h2>
 
+    <h3>Workshop Date: June 25</h3>
     <p>
-    <h3>9:30-9:40 Opening</h3>
+    <h3>14:00-14:10 Opening</h3>
     <p>Christian Decker and Keiichi Yasumoto</p>
     </p>
 
     <p>
-    <h3>9:40-10:30 Keynote</h3>
+    <h3>14:10-15:00 Keynote</h3>
     <p>Chair: Christian Decker</p>
     <ul>
       <li><b><font size="4">Smart Sensing at the Edge for Smart City Applications</font></b><br>
       Hirozumi Yamaguchi (Osaka University)</li>
     </ul>
     </p>
-
+    
     <p>
-    <h3>10:30-11:00 Coffee Break</h3>
-    </p>
-
-    <p>
-    <h3>11:00-13:00 Paper Session</h3>
+    <h3>15:00-16:00 Paper Session</h3>
     <p>Chair: Keiichi Yasumoto</p>
     <ul>
       <li><b>Advancement of IoH/IoT “Assist suits” to support
@@ -70,6 +68,16 @@
       Yuma TSURUGASAKI , Katsuhiro MORI (Aoyama Gakuin University),
     Michael Hefenbrock (Karlsruhe Institute of Technology), and
       Yoshito TOBE (Aoyama Gakuin University)</li>
+    </ul>
+
+    <p>
+      <h3>16:00-16:30 Coffee Break</h3>
+    </p>
+    
+      <p>
+    <h3>16:30-17:10 Paper Session</h3>
+    <p>Chair: Yoshito Tobe</p>
+      <ul>
       <li><b>An Approach for Measuring IoT Interoperability using
       Causal Modeling</b></br>
       Sebastian KOTSTEIN and Christian DECKER (Reutlingen University)</li>
@@ -81,28 +89,17 @@
       </ul>
       </p>
 
-      <p>
-      <h3>13:00-14:00 Lunch Break</h3>
+      <h3>17:10–17:30 Quantitative Analysis and Trends of IWSSS Topics</h3>
+      <p>Christian DECKER (Reutlingen University)</p>
       </p>
 
       <p>
-      <h3>14:00 – 14:30</h3>
-      <ul>
-	<li><b>Quantitative Analysis and Trends of IWSSS Topics</b></br>
-	Christian DECKER (Reutlingen University)</li>
-      </ul>
+      <h3>17:30-18:00 Discussion on a Roadmap of Smart Sensing Systems</h3>
+      <p>All Workshop participants</p>
       </p>
 
       <p>
-      <h3>14:30-15:45</h3>
-      <ul>
-	<li> <b>Discussion on a Roadmap of Smart Sensing Systems</b></br>
-	All Workshop participants</li>
-      </ul>
-      </p>
-
-      <p>
-      <h3>15:45-16:00 Closing</h3>
+      <h3>18:00-18:10 Closing</h3>
       <p>Christian Decker and Keiichi Yasumoto</p>
       </p>
       
@@ -141,6 +138,8 @@ $(window).scroll(function() {
 });
 $("#primary-nav li").click(function() {
   var target = $(this).data("target");
-  $("html, body").animate({scrollTop:$("#" + target).offset().top - 50});
+  if (target!="program"){
+    location.href="index.html#"+target
+  }
 });
 </script>
