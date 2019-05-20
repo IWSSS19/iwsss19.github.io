@@ -11,7 +11,8 @@
     <nav>
       <ul id="primary-nav">
         <li data-target="top">Top</li>
-        <li data-target="overview">Overview</li>
+	<li data-target="overview">Overview</li>
+	<li data-target="program">Program</li>	
         <li data-target="call-for-paper">Call for Paper</li>
         <li data-target="guideline">Guideline</li>
         <li data-target="organizers">Organizers</li>
@@ -251,6 +252,11 @@ $(window).scroll(function() {
 });
 $("#primary-nav li").click(function() {
   var target = $(this).data("target");
-  $("html, body").animate({scrollTop:$("#" + target).offset().top - 50});
-});
+  if (target == "program"){
+    location.href="program.html"
+  }
+  else{
+    $("html, body").animate({scrollTop:$("#" + target).offset().top - 50});
+  }
+  });
 </script>
